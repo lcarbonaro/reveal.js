@@ -6,7 +6,7 @@
 
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-		<title>Slides</title>
+		<title>Slides - Full-Stack Example</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -29,22 +29,66 @@
 			<div class="slides">
 				
 				<section>
-					<section>Firestore</section>
-					<section>fs slide 1</section>
-					<section>fs slide 2</section>
-					<section>fs Slide 3</section>
+					<section>Cloud Firestore</section>
+					<section>NoSQL database, as opposed to relational</section>
+					<section>Stores JSON objects</section>
+					<section data-markdown>						
+						```
+						{
+							name: "Joan",
+							age: 42,
+							isMember: true
+						}
+						```						
+					</section>
+
+					<section>
+						<table style="width:70%;">
+							<thead>
+							<tr>
+								<th>Relational</th>
+								<th>NoSQL</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Table</td>
+								<td>Collection</td>
+							</tr>
+							<tr>
+								<td>Record</td>
+								<td>Document</td>
+							</tr>
+							</tbody>
+						</table>						
+					</section>
+
 				</section>
 
 				<section>
 					<section>CORS</section>
-					<section>cors Slide 1</section>
-					<section>cors Slide 2</section>
-					<section>cors Slide 3</section>
+					<section>Cross-Origin Resource Sharing</section>
+					<section>By default, we can only call API endpoints from the same domain.</section>
+                    <section>We got an error because our front-end page is on domain localhost, and from there we're trying to call our back-end API on cloudfunctions.net</section>
+					<section>CORS lets us change that default.</section>
+					<section>It lets us specify rules about where these calls to our API can originate from.</section>					
+					<section>For now, let's set it so we can call our API from anywhere.</section>
 				</section>
 				
 				<section>
-					<section>Links & References</section>
-					
+					<p>Links & References</p>
+
+					<ul>
+						<li>
+							Firebase CRUD & queries<br/>
+							https://firebase.google.com/docs/firestore/quickstart
+						</li>
+						<li>
+							CORS<br/>
+							https://www.npmjs.com/package/cors
+						</li>
+					</ul>
+
 				</section>
 			</div>
 		</div>
