@@ -1,56 +1,58 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Slides - Full-Stack Example</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>Slides - Full-Stack Example</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section>
+				<section>Cloud Firestore</section>
+				<section>NoSQL database, as opposed to relational</section>
+				<section>Stores JSON objects</section>
+				<section data-markdown>
+					```
+					{
+					name: "Joan",
+					age: 42,
+					isMember: true
+					}
+					```
+				</section>
+
 				<section>
-					<section>Cloud Firestore</section>
-					<section>NoSQL database, as opposed to relational</section>
-					<section>Stores JSON objects</section>
-					<section data-markdown>						
-						```
-						{
-							name: "Joan",
-							age: 42,
-							isMember: true
-						}
-						```						
-					</section>
-
-					<section>
-						<table style="width:70%;">
-							<thead>
+					<table style="width:70%;">
+						<thead>
 							<tr>
 								<th>Relational</th>
 								<th>NoSQL</th>
 							</tr>
-							</thead>
-							<tbody>
+						</thead>
+						<tbody>
 							<tr>
 								<td>Table</td>
 								<td>Collection</td>
@@ -59,56 +61,62 @@
 								<td>Record</td>
 								<td>Document</td>
 							</tr>
-							</tbody>
-						</table>						
-					</section>
-
+						</tbody>
+					</table>
 				</section>
 
+			</section>
+
+			<section>
+				<section>CORS (Cross-Origin Resource Sharing)</section>
 				<section>
-					<section>CORS (Cross-Origin Resource Sharing)</section>
-					<section>
-						We got an error because our front-end page is on domain <strong><u>localhost</u></strong>, and from there we're trying to call 
-						our back-end API on <strong><u>cloudfunctions.net</u></strong> .
-					</section>
-					<section>By default, we can only call API endpoints from the same domain.</section>                    
-					<section>CORS lets us change that default.</section>
-					<section>It lets us specify rules about where these calls to our API can originate from.</section>					
-					<section>For now, let's set it so we can call our API from any domain.</section>
+					We got an error because our front-end page is on domain <strong><u>localhost</u></strong>, and from
+					there we're trying to call
+					our back-end API on <strong><u>cloudfunctions.net</u></strong> .
 				</section>
-				
-				<section>
-					<p>Links & References</p>
+				<section>By default, we can only call API endpoints from the same domain.</section>
+				<section>CORS lets us change that default.</section>
+				<section>It lets us specify rules about where these calls to our API can originate from.</section>
+				<section>For now, let's set it so we can call our API from any domain.</section>
+			</section>
 
-					<ul>
-						<li>
-							Firestore CRUD & queries<br/>
-							https://firebase.google.com/docs/firestore/quickstart
-						</li>
-						<li>
-							CORS<br/>
-							https://www.npmjs.com/package/cors
-						</li>
-					</ul>
+			<section>
+				<p>Links & References</p>
 
-				</section>
-			</div>
+				<ul>
+					<li>
+						Firebase functions<br />
+						https://firebase.google.com/docs/functions/write-firebase-functions
+					</li>
+					<li>
+						Firestore CRUD & queries<br />
+						https://firebase.google.com/docs/firestore/quickstart
+					</li>
+					<li>
+						CORS<br />
+						https://www.npmjs.com/package/cors
+					</li>
+				</ul>
+
+			</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
 </html>
